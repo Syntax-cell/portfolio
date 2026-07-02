@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: auto; /* Lenis handles smooth scrolling */
+  }
+
+  body {
+    @apply bg-ink text-neutral-200 font-sans antialiased;
+    /* Prevent horizontal overflow from slide-in animations */
+    overflow-x: hidden;
+  }
+
+  /* Accent-colored text selection */
+  ::selection {
+    @apply bg-accent text-black;
+  }
+}
+
+@layer utilities {
+  /* Subtle radial glow used behind the hero */
+  .glow-accent {
+    background: radial-gradient(
+      600px circle at 50% 40%,
+      rgba(255, 69, 0, 0.12),
+      transparent 70%
+    );
+  }
+}
+
+/* Lenis smooth-scroll recommended styles */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
