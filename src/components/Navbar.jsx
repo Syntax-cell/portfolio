@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
+import logo from '../assets/pva-logo.png'
 
 const links = [
   { label: 'About', href: '#about' },
@@ -19,8 +20,12 @@ export default function Navbar() {
       className="fixed inset-x-0 top-0 z-50 border-b border-white/5 bg-ink/70 backdrop-blur-md"
     >
       <nav className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
-        <a href="#hero" className="text-sm font-bold tracking-tight">
-          PVA<span className="text-accent">.</span>
+        <a href="#hero" className="flex items-center">
+          <img
+            src={logo}
+            alt="PVA"
+            className="h-8 w-auto object-contain"
+          />
         </a>
 
         {/* Desktop links */}
