@@ -6,6 +6,7 @@ import Hero from './sections/Hero'
 import About from './sections/About'
 import Projects from './sections/Projects'
 import Skills from './sections/Skills'
+import Photography from './sections/Photography'
 import Contact from './sections/Contact'
 
 export default function App() {
@@ -23,6 +24,7 @@ export default function App() {
         <About />
         <Projects />
         <Skills />
+        <Photography />
         <Contact />
       </main>
       <Footer className="relative z-10" />
